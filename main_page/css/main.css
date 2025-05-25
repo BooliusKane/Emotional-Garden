@@ -1,9 +1,90 @@
-/* Here we can set styles for this lab page that we don't want to effect others pages */
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f7e6;
+    color: #3a5a40;
+    overflow-x: hidden;
+}
 
-/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
-.minor-section {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
-  }
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #e8f4d8;
+    border-bottom: 3px solid #8ba888;
+    box-shadow: 0 2px 10px rgba(139, 168, 136, 0.2);
+}
+
+.title {
+    font-family: 'Wooden', 'Nature', 'Arial', sans-serif;
+    font-size: 3rem;
+    color: #5a7247;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+/* Headline font: "Grubby's Garden" */
+.header {
+    .fredericka-the-great-regular {
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+}
+
+/* Navigation/Options Bar */
+.options-bar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #5a7247;
+    background-color: rgba(232, 244, 216, 0.8);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+    background-color: #e8f4d8;
+    transform: scale(1.1);
+}
+
+/* Main Content Area */
+.main-content {
+    margin-right: 350px; /* Make space for the emotional wheel */
+    padding: 20px;
+    min-height: 80vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .emotional-wheel {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin: 30px auto;
+    }
+    
+    .main-content {
+        margin-right: 0;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+}
