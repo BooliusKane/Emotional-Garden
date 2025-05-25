@@ -1,0 +1,12 @@
+.selected {
+    stroke: black;
+    stroke-width: 4;
+    opacity: 1;
+    transition: all 0.2s ease;
+  }
+  
+  #emotionWheel g:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+    transition: transform 0.2s;
+  }
