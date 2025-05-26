@@ -6,6 +6,12 @@ body {
     background-color: #f0f7e6;
     color: #3a5a40;
     overflow-x: hidden;
+    background-image: url('../img/Background.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    height: 100vh;
 }
 
 /* Header Styles */
@@ -26,14 +32,12 @@ body {
 }
 
 /* Headline font: "Grubby's Garden" */
-.header {
-    .fredericka-the-great-regular {
+.header.fredericka-the-great-regular {
   font-family: "Fredericka the Great", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-}
 
 /* Navigation/Options Bar */
 .options-bar {
