@@ -1,5 +1,12 @@
 .main_greenhouse{
     width: 65%;
     display: block;
-    transform: translate(300px, -50px);
+    transform: translate(300px, -45px);
+    z-index: -1;
+}
+
+.fear_sprout{
+    z-index: 2;
+    display: block;
+    transform: translate(100px);
 }
