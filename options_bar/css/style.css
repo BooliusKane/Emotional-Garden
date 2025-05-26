@@ -1,0 +1,29 @@
+/* The Modal (background) */
+.modal {
+  background-image: url('../img/audio-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+}
+
+#audioHeader {
+  size: 10px;
+  position: absolute;
+  left: 50px; /* X axis */
+  top: 50px;  /* Y axis */
+}
+
+#audioPlus {
+  background-image: url('../img/audio-plus.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
