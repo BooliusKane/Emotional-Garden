@@ -21,9 +21,9 @@ function setRandomBackgroundImage() {
    const randomIndex = Math.floor(Math.random() * images.length);
 
    // Set the selected image as a CSS background-image for the body element
-      document.body.style.backgroundImage=`url('${images[randomindex]}')`;
+      document.body.style.backgroundImage=`url('${images[randomIndex]}')`;
 }
 
 // Call the function to initialize a random background image when the page loads
 
-setRandomBackgroundImage();
+$("#output").html(setRandomBackgroundImage());
