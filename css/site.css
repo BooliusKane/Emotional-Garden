@@ -92,3 +92,63 @@ body {
         font-size: 2rem;
     }
 }
+
+/* Container for Chia + Greenhouse */
+.garden-creature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Wrapper contains Chia + Greenhouse together */
+.chia-wrapper{
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Resting state */
+.resting{
+    width: 1200px;
+    transform: translateY(125px);
+}
+
+/*Active state*/
+.active{
+    width: 1000px;
+    transform: translateY(-100px);
+}
+
+.chia{
+    width: 100%;
+    display: block;
+}
+
+/*Greenhouse Position*/
+.greenhouse{
+    position: absolute;
+    width: 16%;
+    top: 50%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.chia, .greenhouse{
+    margin: 0;
+    padding: 0;
+}
+
+.active .greenhouse{
+    top:53%;
+    left:64%
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
