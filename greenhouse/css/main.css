@@ -1,8 +1,7 @@
 .main_greenhouse{
     width: 65%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto
 }
 
 /* Back Button */
