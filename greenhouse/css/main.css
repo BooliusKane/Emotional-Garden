@@ -1,0 +1,5 @@
+.main_greenhouse{
+    width: 65%;
+    display: block;
+    transform: translate(300px, -50px);
+}
