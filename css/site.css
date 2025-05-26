@@ -42,7 +42,7 @@ body {
 /* Navigation/Options Bar */
 .options-bar {
     position: fixed;
-    top: 20px;
+    top: 36px;
     right: 20px;
     z-index: 1000;
 }

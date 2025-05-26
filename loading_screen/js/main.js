@@ -1,7 +1,6 @@
 /*
     Loading Screen
-    JavaScript - Grubby Loading Screens
-    Daisy Ly
+    JavaScript - Grubby Loading Screen
     May 2025
 */
 
