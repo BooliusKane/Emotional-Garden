@@ -1,15 +1,50 @@
 .main_greenhouse{
-    width: 65%;
-    display: block;
-    transform: translate(300px, -45px);
-    z-index: -1;
+    width: 59%;
+    transform: rotate(.5deg) translate(275px, -30px);
+    position: absolute;
+    z-index: 1000;
 }
 
 .fear_sprout{
-    z-index: 2;
-    display: block;
-    transform: translate(100px);
-    margin: auto
+    scale: 15%;
+    transform: translate(750px, 440px);
+    z-index: 1500;
+    position: fixed;
+}
+
+.happy_sprout{
+    scale: 15%;
+    transform: translate(750px, -300px);
+    z-index: 2000;
+    position: fixed;
+}
+
+.lily_sprout{
+    scale: 15%;
+    transform: translate(2800px, 390px);
+    z-index: 1500;
+    position: fixed;
+}
+
+.petunia_sprout{
+    scale: 15%;
+    transform: translate(750px, -1060px);
+    z-index: 1500;
+    position: fixed;
+}
+
+.sad_sprout{
+    scale: 15%;
+    transform: translate(2800px, -1100px);
+    z-index: 1500;
+    position: fixed;
+}
+
+.venus_sprout{
+    scale: 15%;
+    transform: translate(2850px, -390px);
+    z-index: 1500;
+    position: fixed;
 }
 
 /* Back Button */
