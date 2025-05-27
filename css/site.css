@@ -74,6 +74,22 @@ body {
     min-height: 80vh;
 }
 
+/* Loading Output */
+output {
+    display: none; /* Initially hide the image */
+    margin: auto;
+    position: absolute;
+    size: 100%;
+
+}
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .emotional-wheel {
