@@ -1,0 +1,10 @@
+/* Here we can set styles for this lab page that we don't want to effect others pages */
+
+/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover; /* Ensure the image covers the entire viewport */
+}
