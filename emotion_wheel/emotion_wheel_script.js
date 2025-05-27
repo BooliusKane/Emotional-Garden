@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initializeEmotionWheel() {
   const segmentIds = ["anger", "disgust", "fear", "happiness", "sadness", "surprise"];
   const emotionText = document.getElementById("selected-emotion");
 
@@ -30,4 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-});
+}

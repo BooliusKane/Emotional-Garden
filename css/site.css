@@ -74,11 +74,6 @@ body {
     min-height: 80vh;
 }
 
-.emotion-wheel {
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
-}
 
 /* Loading Output */
 img {
@@ -89,13 +84,6 @@ img {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .emotional-wheel {
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: none;
-        margin: 30px auto;
-    }
     
     .main-content {
         margin-right: 0;
@@ -171,6 +159,23 @@ html, body{
     padding: 0;
     overflow: hidden;
 }
+
+#emotionOverlay {
+    position: absolute;     /* Or use 'fixed' if you want it to stay put when scrolling */
+    top: 50%;               /* Center vertically */
+    left: 75%;              /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+  }
+  
+  #emotionWheel {
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
 
 .under_construction {
     display: none; /* Hide by default */

@@ -34,19 +34,26 @@ $("#output").html(loadingscreen);
 setTimeout(()=>{
     const finite=document.getElementById('output');
     finite.style.display='none';
+      // Now that loading is done, initialize the emotion wheel
+  initializeEmotionWheel();
 }, 3000);
 
+
+
 $(document).ready(function() {
-   let isAwake = false;
+    let isAwake = false;
+ 
+    $("#chia").on("click", function(){
+        if (!isAwake) {
+            $(".chia-wrapper").removeClass("resting").addClass("active");
+            $("#emotionWheel").removeClass("hidden"); // Show the SVG
+            isAwake = true;
+        }
+    });
+ 
+    $("#greenhouse").on("click", function(){
+         window.location.href = "greenhouse/index.html";
+    });
+ });
 
-   $("#chia").on("click", function(){
-    if (!isAwake){
-        $(".chia-wrapper").removeClass("resting").addClass("active");
-        isAwake = true;
-    }
-   });
-
-   $("#greenhouse").on("click", function(){
-        window.location.href= "greenhouse/index.html";
-   });
-});
+ 
