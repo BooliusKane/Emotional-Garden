@@ -36,7 +36,6 @@ setTimeout(()=>{
     finite.style.display='none';
 }, 3000);
 
-
 $(document).ready(function() {
    let isAwake = false;
 
