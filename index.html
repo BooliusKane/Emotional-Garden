@@ -3,33 +3,70 @@
 <head>
 
 	<!-- Link to the google font "Fredericka the Great" -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-	<!-- Link to the CSS stylesheet -->
-		<link rel="stylesheet" type="text/css" href="css/site.css">
-	<!-- Link to the JS main file -->
-	 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
-    	<script src="js/main.js" DEFER></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+	
+	<!-- Link to the CSS stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/emotion_wheel.css">  <!-- For wheel styles -->
+
+	<!-- Link to the JS main files -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+	<script src="js/main.js" defer></script>
+	<script src="js/emotion_wheel_script.js" defer></script>  <!-- For wheel functionality -->
+
 </head>
 <body>
 
-	<!-- OPTIONS BAR (Navigation)-->
+	<!-- OPTIONS BAR (Navigation) -->
 	<div class="options-bar">
 		<div class="menu-icon">☰</div>
 	</div>
 
-	<!-- MAIN CONTENT-->
+	<!-- MAIN CONTENT -->
 	<main>
 		<h1 class="header fredericka-the-great-regular">Grubby's Garden</h1>
 		
-		<!-- Garden Creature and greenhouse-->
+		<!-- Garden Creature and greenhouse -->
 		<section class="garden-creature">
 			<div class="chia-wrapper resting">
 				<img id="chia" src="img/Creature_only.png" alt="Chia" class="chia resting">
 				<img id="greenhouse" src="img/Big_greenhouse.png" alt="Greenhouse" class="greenhouse">
 			</div>
 		</section>
+
+		<!-- Emotions Wheel -->
+		<section class="emotion-wheel" style="width: 400px; margin: 0 auto;">
+
+			<svg id="emotionWheel" width="400" height="400" viewBox="0 0 400 400">
+				<g id="anger" class="segment" fill="violet" cursor="pointer">
+					<path d="M200 200 L400 200 A200 200 0 0 1 330 60 Z" stroke="black" stroke-width="1"></path>
+				</g>
+				<g id="disgust" class="segment" fill="indigo" cursor="pointer">
+					<path d="M200 200 L330 60 A200 200 0 0 1 210 10 Z" stroke="black" stroke-width="1"></path>
+				</g>
+				<g id="fear" class="segment" fill="yellow" cursor="pointer">
+					<path d="M200 200 L210 10 A200 200 0 0 1 90 10 Z" stroke="black" stroke-width="1"></path>
+				</g>
+				<g id="happiness" class="segment" fill="red" cursor="pointer">
+					<path d="M200 200 L90 10 A200 200 0 0 1 10 90 Z" stroke="black" stroke-width="1"></path>
+				</g>
+				<g id="sadness" class="segment" fill="blue" cursor="pointer">
+					<path d="M200 200 L10 90 A200 200 0 0 1 10 310 Z" stroke="black" stroke-width="1"></path>
+				</g>
+				<g id="surprise" class="segment" fill="green" cursor="pointer">
+					<path d="M200 200 L10 310 A200 200 0 0 1 90 390 Z" stroke="black" stroke-width="1"></path>
+				</g>
+				<text x="200" y="200" text-anchor="middle" dominant-baseline="middle" font-size="24" fill="#333" pointer-events="none">Emotion Wheel</text>
+			</svg>
+
+			<div id="selected-emotion" style="text-align: center; margin-top: 10px; font-weight: bold;">
+				Select an emotion
+			</div>
+
+		</section>
 	</main>
+
 </body>
 </html>
