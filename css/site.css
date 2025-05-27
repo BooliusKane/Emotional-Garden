@@ -74,6 +74,12 @@ body {
     min-height: 80vh;
 }
 
+.emotion-wheel {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
 /* Loading Output */
 img {
     width: 100%;
@@ -99,6 +105,12 @@ img {
         font-size: 2rem;
     }
 }
+
+#emotionWheel {
+  width: 100%;
+  height: 100%;
+}
+
 
 /* Container for Chia + Greenhouse */
 .garden-creature{
