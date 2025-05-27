@@ -75,19 +75,10 @@ body {
 }
 
 /* Loading Output */
-output {
-    display: none; /* Initially hide the image */
-    margin: auto;
-    position: absolute;
-    size: 100%;
-
-}
-.show {
-    display: block;
-}
-
-.hide {
-    display: none;
+img {
+    width: 100%;
+    height: auto;
+    z-index: 2000;
 }
 
 /* Responsive Design */

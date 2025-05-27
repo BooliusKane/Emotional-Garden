@@ -26,10 +26,18 @@ function load(randomNumber) {
         img = document.createElement('img');
         img.src = './img/unpaidgrub.png';
     }
-   return img;
+    return img;
 }
 let loadingscreen = load(randomNumber);
- 
+$("#output").html(loadingscreen);
+
+setTimeout(()=>{
+    const finite=document.getElementById('output');
+    finite.style.display='none';
+}, 3000);
+
+
+
 
 $(document).ready(function() {
    let isAwake = false;
