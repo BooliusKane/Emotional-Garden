@@ -37,8 +37,6 @@ setTimeout(()=>{
 }, 3000);
 
 
-
-
 $(document).ready(function() {
    let isAwake = false;
 
