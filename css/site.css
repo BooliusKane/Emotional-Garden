@@ -14,6 +14,11 @@ body {
     height: 100vh;
 }
 
+/* loading screen */
+#output {
+    z-index: 1002;
+}
+
 /* Header Styles */
 .header {
     text-align: center;
@@ -94,11 +99,6 @@ img {
     }
 }
 
-#emotionWheel {
-  width: 100%;
-  height: 100%;
-}
-
 
 /* Container for Chia + Greenhouse */
 .garden-creature{
@@ -170,13 +170,6 @@ html, body{
     transition: all 0.2s ease;
   }
   
-  /* Style the wheel container */
-  .emotion-wheel {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    position: relative;
-  }
   
   /* Hover effect on segments */
   #emotionWheel g:hover {
@@ -191,6 +184,8 @@ html, body{
     top: 50%;               /* Center vertically */
     left: 75%;              /* Center horizontally */
     transform: translate(-50%, -50%); /* Perfect centering */
+    z-index: 1003; /* Higher than greenhouse/chia-wrapper (z-index: 1) */
+    pointer-events: auto;  /* Make sure it can receive clicks */
   }
   
   #emotionWheel {

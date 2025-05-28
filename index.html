@@ -29,9 +29,7 @@
 			</div>
 		</section>
 		<div id="emotionOverlay">
-			<h2>Click an Emotion</h2>
-			<?xml version="1.0" encoding="utf-8"?>
-			<svg version="1.1"  class="hidden" id="emotionWheel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="903 193 614 708">
+			<svg version="1.1"  id="emotionWheel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="903 193 614 708">
 				<style type="text/css">
 					.st0{fill:#9C82BA;}
 					.st1{enable-background:new    ;}
@@ -42,16 +40,8 @@
 					.st6{fill:#FEF1A6;}
 					.st7{fill:#9BACDE;}
 					.st8{fill:#F5ABCC;}
-                    /* Styles for the emotion text */
-                    .emotion-text {
-                        font-family: Arial, sans-serif;
-                        font-size: 30px; /* Adjust font size as needed */
-                        font-weight: bold;
-                        text-anchor: middle;
-                        pointer-events: none; /* Allows clicks to pass through to the segment */
-                    }
 				</style>
-				<g id="anger">
+				<g id="anger" class="emotion-section hidden" onclick="goToGreenhouse('petunia_sprout')">
 					<path class="st0" d="M903.6,724.5c61.2,105.7,175.5,176.8,306.4,177V547.3L903.6,724.5L903.6,724.5z"/>
 					<g class="st1">
 						<path class="st2" d="M1010.6,745.7c0-5.5,5.8-12,11.6-12c1.7,0,2.8,0.6,3.2,1.8c0.3-0.1,0.5-0.1,0.8-0.1c2,0,3.6,1.3,4.2,2.9
@@ -108,7 +98,7 @@
 							C1122.3,753.7,1120.6,751.6,1120.6,749.1z"/>
 					</g>
 				</g>
-				<g id="disgust">
+				<g id="disgust" class="emotion-section hidden" onclick="goToGreenhouse('venus_sprout')">
 					<path class="st4" d="M1210.2,901.3c122.2-0.2,240.9-63.6,306.5-176.9L1210,547.3L1210.2,901.3L1210.2,901.3z"/>
 					<g class="st1">
 						<path class="st2" d="M1260,741.6c0-5.3,3.9-8.9,9.8-8.8c3,0,5.2,0.9,6.3,2.6c0.5-2.9,0.8-6.4,0.8-10.4c0-2,0.8-2.6,2-2.6
@@ -185,7 +175,7 @@
 							C1398.2,753.3,1395.8,748.6,1395.8,741.7z"/>
 					</g>
 				</g>
-				<g id="fear">
+				<g id="fear" class="emotion-section hidden" onclick="goToGreenhouse('fear_sprout')">
 					<path class="st5" d="M1209.8,193.3c-122.2,0.2-240.9,63.6-306.5,176.9L1210,547.3L1209.8,193.3L1209.8,193.3z"/>
 					<g class="st1">
 						<path class="st2" d="M1043.9,369.1c0-9-1.7-12-1.7-19.8c0-8.5,4.5-13.3,9.4-13.3c1.7,0,3.4,0.8,3.4,3c0,1.2-0.6,2-1.8,2.4
@@ -230,7 +220,7 @@
 							C1116.7,366.8,1115,364.8,1115,362.3z"/>
 					</g>
 				</g>
-				<g id="happiness">
+				<g id="happiness" class="emotion-section hidden" onclick="goToGreenhouse('happy_sprout')">
 					<path class="st6" d="M1516.7,724.1c60.9-105.9,65.4-240.4,0.1-353.9L1210,547.3L1516.7,724.1z"/>
 					<g class="st1">
 						<path class="st2" d="M1320.7,550.1c0-7.8,1.2-13,1.3-17.3c0-2.9-0.5-4.2-0.4-5.8c0-1.1,0.7-2.2,2.6-2.2c2,0,4.1,1.6,4,7.2
@@ -333,7 +323,7 @@
 							c1.9,3.3,12.6,1.4,12.6,8.7c0,5.9-5.9,8.7-12.2,8.7C1513.4,557.3,1510.9,554.5,1510.9,552.1z"/>
 					</g>
 				</g>
-				<g id="sadness">
+				<g id="sadness" class="emotion-section hidden" onclick="goToGreenhouse('sad_sprout')">
 					<path class="st7" d="M1516.4,370.1c-61.2-105.7-175.5-176.9-306.4-177v354.2L1516.4,370.1z"/>
 					<g class="st1">
 						<path class="st2" d="M1248.3,363c0-1,0.6-1.8,1.7-1.8c1.6,0,2.8,1.1,5.4,1.1c3,0,4.7-0.6,6.1-2.4c-2.2-2.4-12.5-1.1-12.5-9
@@ -412,7 +402,7 @@
 							c1.9,3.3,12.6,1.4,12.6,8.7c0,5.9-5.9,8.7-12.2,8.7C1401.8,368.2,1399.3,365.5,1399.3,363z"/>
 					</g>
 				</g>				
-				<g id="surprise">
+				<g id="surprise" class="emotion-section hidden" onclick="goToGreenhouse('lily_sprout')">
 					<path class="st8" d="M903.3,370.5c-60.9,105.9-65.4,240.4-0.1,353.9L1210,547.3L903.3,370.5L903.3,370.5z"/>
 					<g class="st1">
 						<path class="st2" d="M909.8,552.3c0-1,0.6-1.8,1.7-1.8c1.6,0,2.8,1.1,5.4,1.1c3,0,4.7-0.6,6.1-2.4c-2.2-2.4-12.5-1.1-12.5-9
@@ -494,7 +484,6 @@
 					</g>
 				</g>
 				</svg>
-			<p id="selected-emotion">Selected: None</p>
 			<script src="/js/main.js"></script>
 		</div>
 	</main>
