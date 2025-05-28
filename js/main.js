@@ -1,4 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  console.log("jQuery ready!");
+
   // LOADING SCREEN
   let randomNumber = Math.floor(Math.random() * 6) + 1;
 
@@ -23,46 +25,67 @@ $(document).ready(function() {
     counter--;
     if (counter <= 0) {
       clearInterval(counterInterval);
-      // Hide the loading screen div after countdown
       $("#output").fadeOut(500, function () {
-        // Enable interactions and show the emotion wheel AFTER loading screen fades out
+        $(this).remove(); 
         activateInteractions();
       });
     }
   }, 1000);
 
-  // Function to activate all click interactions and show emotion wheel
+  // Function to activate all interactions
   function activateInteractions() {
-    // CHIA CLICK INTERACTION
-    let isAwake = false;
-    $("#chia").on("click", function () {
-      if (!isAwake) {
-        $(".chia-wrapper").removeClass("resting").addClass("active");
-        isAwake = true;
-      }
-    });
+  // MENU INTERACTIONS (moved here!)
+  $("#menuIcon").on("click", function (event) {
+    const $dropdown = $("#menuDropdown");
 
-    // GREENHOUSE CLICK
-    $("#greenhouse").on("click", function () {
-      window.location.href = "greenhouse/index.html";
-    });
+    if ($dropdown.hasClass("hidden")) {
+      $dropdown.removeClass("hidden").css("display", "flex");
+    } else {
+      $dropdown.addClass("hidden").css("display", "none");
+    }
 
-    // EMOTION WHEEL
-    const segmentIds = ["anger", "disgust", "fear", "happiness", "sadness", "surprise"];
-    segmentIds.forEach(id => {
-      const segment = document.getElementById(id);
-      if (segment) {
-        segment.classList.remove('hidden'); // Now make it visible
-        segment.style.cursor = "pointer";
+    event.stopPropagation();
+  });
 
-        segment.addEventListener("click", () => {
-          let currentCount = parseInt(localStorage.getItem(id + "_clicks")) || 0;
-          currentCount++;
-          localStorage.setItem("activeEmotion", id);
-          localStorage.setItem(id + "_clicks", currentCount);
-          window.location.href = "greenhouse/index.html";
-        });
-      }
-    });
-  }
+  $(document).on("click", function (event) {
+    if (!$(event.target).closest("#menuIcon, #menuDropdown").length) {
+      $("#menuDropdown").addClass("hidden").css("display", "none");
+    }
+  });
+
+  // CHIA CLICK INTERACTION
+  let isAwake = false;
+  $("#chia").on("click", function () {
+    if (!isAwake) {
+      $(".chia-wrapper").removeClass("resting").addClass("active");
+      isAwake = true;
+    }
+  });
+
+  // GREENHOUSE CLICK
+  $("#greenhouse").on("click", function () {
+    window.location.href = "greenhouse/index.html";
+  });
+
+  // EMOTION WHEEL
+  const segmentIds = ["anger", "disgust", "fear", "happiness", "sadness", "surprise"];
+  segmentIds.forEach(id => {
+    const segment = document.getElementById(id);
+    if (segment) {
+      segment.classList.remove("hidden");
+      segment.style.cursor = "pointer";
+
+      segment.addEventListener("click", () => {
+        let currentCount = parseInt(localStorage.getItem(id + "_clicks")) || 0;
+        currentCount++;
+        localStorage.setItem("activeEmotion", id);
+        localStorage.setItem(id + "_clicks", currentCount);
+        window.location.href = "greenhouse/index.html";
+      });
+    }
+  });
+}
+  
 });
+
+console.log("jQuery ready!");
