@@ -78,7 +78,7 @@ function initializeEmotionWheel() {
           segment.classList.add("selected");
   
           // Update selected emotion text
-          const label = id.charAt(0).toUpperCase() + id.slice(1);
+          const label = id.slice(1);
           if (emotionText) {
             emotionText.textContent = `Selected: ${label}`;
           }

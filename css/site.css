@@ -160,7 +160,33 @@ html, body{
     overflow: hidden;
 }
 
-#emotionOverlay {
+/* EMOTION WHEEL */
+
+/* Highlight selected segment */
+.selected {
+    stroke: black;
+    stroke-width: 4;
+    opacity: 1;
+    transition: all 0.2s ease;
+  }
+  
+  /* Style the wheel container */
+  .emotion-wheel {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Hover effect on segments */
+  #emotionWheel g:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+    transition: transform 0.2s, opacity 0.2s;
+    cursor: pointer;
+  }
+  
+  #emotionOverlay {
     position: absolute;     /* Or use 'fixed' if you want it to stay put when scrolling */
     top: 50%;               /* Center vertically */
     left: 75%;              /* Center horizontally */
@@ -176,6 +202,7 @@ html, body{
   .hidden {
     display: none;
   }
+  
 
 .under_construction {
     display: none; /* Hide by default */

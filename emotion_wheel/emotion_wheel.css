@@ -21,3 +21,20 @@
   transition: transform 0.2s, opacity 0.2s;
   cursor: pointer;
 }
+
+#emotionOverlay {
+  position: absolute;     /* Or use 'fixed' if you want it to stay put when scrolling */
+  top: 50%;               /* Center vertically */
+  left: 75%;              /* Center horizontally */
+  transform: translate(-50%, -50%); /* Perfect centering */
+}
+
+#emotionWheel {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
