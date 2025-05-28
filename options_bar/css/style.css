@@ -1,0 +1,98 @@
+/* The modal's background */
+.modal {
+  background-image: url('../img/audio-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 1;
+  padding-top: 10px;
+  overflow: auto;     
+}
+
+/* first audio increse button */
+#plus1 {
+  position: absolute;
+  top: 340px; /* adjust these values */
+  left: 1000px; /* adjust these values */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+#plus1 img {
+  width: 50px;
+  height: auto;
+}
+
+/* second audio increse button */
+#plus2 {
+  position: absolute;
+  top: 520px; /* adjust these values */
+  left: 1000px; /* adjust these values */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+#plus2 img {
+  width: 50px;
+  height: auto;
+}
+
+/* first audio decrease button */
+#minus1 {
+  position: absolute;
+  top: 340px; /* adjust these values */
+  left: 600px; /* adjust these values */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+#minus1 img {
+  width: 50px;
+  height: auto;
+}
+
+/* second audio decrease button */
+#minus2 {
+  position: absolute;
+  top: 520px; /* adjust these values */
+  left: 600px; /* adjust these values */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+#minus2 img {
+  width: 50px;
+  height: auto;
+}
+
+/* worms */
+.worm1 {
+  position: absolute;
+  top: 340px; /* adjust these values */
+  left: 800px; /* adjust these values */
+  transform: translate(-50%, -50%); 
+}
+
+.worm2 {
+  position: absolute;
+  top: 520px; /* adjust these values */
+  left: 800px; /* adjust these values */
+  transform: translate(-50%, -50%); 
+}
+
+.worm1 img {
+  width: 600px;
+  height: auto;
+}
+
+.worm2 img {
+  width: 600px;
+  height: auto;
+}
