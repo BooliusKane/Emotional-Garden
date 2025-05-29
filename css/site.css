@@ -96,6 +96,14 @@ img {
     z-index: 2000;
 }
 
+/* Sign Grubby */
+.signgrub {
+    height: 100px;
+    width: auto;
+    display: flex;
+    float: left;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     
