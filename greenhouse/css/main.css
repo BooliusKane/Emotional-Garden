@@ -1,6 +1,6 @@
 .main_greenhouse{
     width: 59%;
-    transform: rotate(.5deg) translate(275px, -30px);
+    transform: rotate(.5deg) translate(320px, -30px);
     position: absolute;
     z-index: 1000;
 }

@@ -1,92 +1,91 @@
-// main.js - handles global clickable assets like Chia and greenhosue
-// Used by: index.html (main page)
+$(document).ready(function () {
+  console.log("jQuery ready!");
 
-// LOADING SCREEN
-// Array of image URLs - Replace with your image file names
-let randomNumber = Math.floor(Math.random() * 6) + 1;
+  // LOADING SCREEN
+  let randomNumber = Math.floor(Math.random() * 6) + 1;
 
-function load(randomNumber) {
-    let img;
-    if (randomNumber === 1) {
-        img = document.createElement('img');
-        img.src = './img/leafgrub.png';
-    } else if (randomNumber === 2) {
-        img = document.createElement('img');
-        img.src = './img/sleepygrubsky.png';
-    } else if (randomNumber === 3) {
-        img = document.createElement('img');
-        img.src = './img/pupasoilgrub.png';
-    } else if (randomNumber === 4) {
-        img = document.createElement('img');
-        img.src = './img/barrowgrub.png';
-    } else if (randomNumber === 5) {
-        img = document.createElement('img');
-        img.src = './img/watergrub.png';
-    } else if (randomNumber === 6) {
-        img = document.createElement('img');
-        img.src = './img/unpaidgrub.png';
+  function load(randomNumber) {
+    let img = document.createElement('img');
+    switch (randomNumber) {
+      case 1: img.src = './img/leafgrub.png'; break;
+      case 2: img.src = './img/sleepygrubsky.png'; break;
+      case 3: img.src = './img/pupasoilgrub.png'; break;
+      case 4: img.src = './img/barrowgrub.png'; break;
+      case 5: img.src = './img/watergrub.png'; break;
+      case 6: img.src = './img/unpaidgrub.png'; break;
     }
     return img;
-}
-let loadingscreen = load(randomNumber);
-$("#output").html(loadingscreen);
-
-$(document).ready(function() {
-    let isAwake = false;
- 
-    $("#chia").on("click", function(){
-        if (!isAwake) {
-            $(".chia-wrapper").removeClass("resting").addClass("active");
-            isAwake = true;
-        }
-    });
- 
-    $("#greenhouse").on("click", function(){
-         window.location.href = "greenhouse/index.html";
-    });
- });
-
-//  emotion wheel:
-// appear after loading screen (???)
-setTimeout(()=>{
-    const finite=document.getElementById('output');
-    finite.style.display='none';
-      // Now that loading is done, initialize the emotion wheel
-  initializeEmotionWheel();
-}, 3000);
-
-// interaction
-function initializeEmotionWheel() {
-    const segmentIds = ["anger", "disgust", "fear", "happiness", "sadness", "surprise"];
-    const emotionText = document.getElementById("selected-emotion");
-  
-    segmentIds.forEach(id => {
-      const segment = document.getElementById(id);
-      if (segment) {
-        segment.style.cursor = "pointer";
-  
-        segment.addEventListener("click", () => {
-          // Deselect all segments
-          segmentIds.forEach(otherId => {
-            const otherSegment = document.getElementById(otherId);
-            if (otherSegment) {
-              otherSegment.classList.remove("selected");
-            }
-          });
-  
-          // Highlight selected segment
-          segment.classList.add("selected");
-  
-          // Update selected emotion text
-          const label = id.slice(1);
-          if (emotionText) {
-            emotionText.textContent = `Selected: ${label}`;
-          }
-  
-          // Redirect user to relevant page
-          window.location.href = "greenhouse/index.html";
-        });
-      }
-    });
   }
+
+  let loadingscreen = load(randomNumber);
+  $("#output").html(loadingscreen);
+
+  let counter = 5;
+  const counterInterval = setInterval(() => {
+    counter--;
+    if (counter <= 0) {
+      clearInterval(counterInterval);
+      $("#output").fadeOut(500, function () {
+        $(this).remove(); 
+        activateInteractions();
+      });
+    }
+  }, 1000);
+
+  // Function to activate all interactions
+  function activateInteractions() {
+  // MENU INTERACTIONS (moved here!)
+  $("#menuIcon").on("click", function (event) {
+    const $dropdown = $("#menuDropdown");
+
+    if ($dropdown.hasClass("hidden")) {
+      $dropdown.removeClass("hidden").css("display", "flex");
+    } else {
+      $dropdown.addClass("hidden").css("display", "none");
+    }
+
+    event.stopPropagation();
+  });
+
+  $(document).on("click", function (event) {
+    if (!$(event.target).closest("#menuIcon, #menuDropdown").length) {
+      $("#menuDropdown").addClass("hidden").css("display", "none");
+    }
+  });
+
+  // CHIA CLICK INTERACTION
+  let isAwake = false;
+  $("#chia").on("click", function () {
+    if (!isAwake) {
+      $(".chia-wrapper").removeClass("resting").addClass("active");
+      isAwake = true;
+    }
+  });
+
+  // GREENHOUSE CLICK
+  $("#greenhouse").on("click", function () {
+    window.location.href = "greenhouse/index.html";
+  });
+
+  // EMOTION WHEEL
+  const segmentIds = ["anger", "disgust", "fear", "happiness", "sadness", "surprise"];
+  segmentIds.forEach(id => {
+    const segment = document.getElementById(id);
+    if (segment) {
+      segment.classList.remove("hidden");
+      segment.style.cursor = "pointer";
+
+      segment.addEventListener("click", () => {
+        let currentCount = parseInt(localStorage.getItem(id + "_clicks")) || 0;
+        currentCount++;
+        localStorage.setItem("activeEmotion", id);
+        localStorage.setItem(id + "_clicks", currentCount);
+        window.location.href = "greenhouse/index.html";
+      });
+    }
+  });
+}
   
+});
+
+console.log("jQuery ready!");

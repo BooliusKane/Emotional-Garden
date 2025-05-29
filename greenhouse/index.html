@@ -29,5 +29,44 @@
 			<img id="sad_sprout"      src="img/sadsprout.PNG"                   alt="sad_sprout"      class="sad_sprout">
 			<img id="venus_sprout"    src="img/venussprout.PNG"                 alt="venus_sprout"    class="venus_sprout">
 	</main>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+		  const emotion = localStorage.getItem("activeEmotion");
+		  if (!emotion) return;
+	  
+		  const growthStage = parseInt(localStorage.getItem(emotion + "_clicks")) || 1;
+	  
+		  // Map emotions to sprout IDs
+		  const emotionToSprout = {
+			fear: "Fear_sprout",
+			happiness: "happy_sprout",
+			surprise: "lily_sprout",
+			anger: "petunia_sprout",
+			sadness: "sad_sprout",
+			disgust: "venus_sprout"
+		  };
+	  
+		  // Hide all sprouts
+		  const sproutIds = Object.values(emotionToSprout);
+		  sproutIds.forEach(id => {
+			const sprout = document.getElementById(id);
+			if (sprout) {
+			  sprout.style.display = "none";
+			}
+		  });
+	  
+		  // Show and update the corresponding sprout
+		  const sproutId = emotionToSprout[emotion];
+		  const sprout = document.getElementById(sproutId);
+		  if (sprout) {
+			sprout.style.display = "block";
+	  
+			// Choose the right image file based on click count
+			const baseSrc = sprout.getAttribute("src").split(".PNG")[0]; // Remove extension
+			const stage = Math.min(growthStage, 3); // Cap at stage 3
+			sprout.setAttribute("src", `${baseSrc}${stage}.PNG`);
+		  }
+		});
+	  </script>
 </body>
 </html>
