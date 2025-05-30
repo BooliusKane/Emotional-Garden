@@ -1,0 +1,18 @@
+/* The modal's background */
+.credits {
+  background-image: url('../img/audio-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 1;
+  padding-top: 10px;
+  overflow: auto;     
+}
+

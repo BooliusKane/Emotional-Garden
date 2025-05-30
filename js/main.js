@@ -20,7 +20,7 @@ $(document).ready(function () {
   let loadingscreen = load(randomNumber);
   $("#output").html(loadingscreen);
 
-  let counter = 5;
+  let counter = 3;
   const counterInterval = setInterval(() => {
     counter--;
     if (counter <= 0) {
