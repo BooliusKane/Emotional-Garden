@@ -1,3 +1,31 @@
+/* background image */
+body {
+    overflow-x: hidden;
+    background-image: url('../img/Background.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    height: 100vh;
+}
+
+/* back button */
+.Back_button {
+    position: fixed;
+    top: 36px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.Back_button:hover {
+    background-color: #e8f4d8;
+    transform: scale(1.1);
+}
+
 /* The modal's background */
 .modal {
   background-image: url('../img/audio-background.png');
@@ -96,3 +124,4 @@
   width: 600px;
   height: auto;
 }
+

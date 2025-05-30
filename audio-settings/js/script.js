@@ -10,20 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const audioPlus2 = document.getElementById("audioPlus2");
   const audioMinus2 = document.getElementById("audioMinus2");
 
-  // Modal open
-  openBtn.onclick = function () {
-    modal.style.display = "block";
-    console.log("Hey there!");
-  };
-
-  // Modal close
-  modal.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-      console.log("Bye-bye!");
-    }
-  };
-
   // Increase/decrease logs
   plus1.onclick = () => console.log("volume increase");
   minus1.onclick = () => console.log("volume decrease");
@@ -73,4 +59,14 @@ document.addEventListener("DOMContentLoaded", function () {
     "plus2",
     "minus2"
   );
+});
+
+// General click effect
+const clickSound = document.getElementById("click");
+
+document.addEventListener("click", function (e) {
+  if (e.target.closest("#chia")) return; // skip if clicked element is #chia or inside it
+
+  clickSound.currentTime = 0;
+  clickSound.play();
 });
