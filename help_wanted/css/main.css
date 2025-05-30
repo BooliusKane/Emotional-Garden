@@ -1,0 +1,88 @@
+#overview {
+    height: 560px;
+    width: auto;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#instructions {
+    height: 560px;
+    width: auto;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    z-index: 50;
+    display: none;
+}
+
+#bluetab {
+    position: absolute;
+    height: 58px;
+    width: auto;
+    display: block;
+    translate: 596px 6px;
+    overflow: hidden;
+    z-index: 50;
+}
+
+#greentab {
+    float:inline-start;
+    height: 60px;
+    width: auto;
+    display: block;
+    margin: auto;
+    translate: 610px 4px;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Back Button */
+.Back_button {
+    position: fixed;
+    top: 36px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.Back_button:hover {
+    background-color: #e8f4d8;
+    transform: scale(1.1);
+}
+
+/* Navigation/Options Bar */
+.options-bar {
+    position: fixed;
+    top: 36px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #5a7247;
+    background-color: rgba(232, 244, 216, 0.8);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+    background-color: #e8f4d8;
+    transform: scale(1.1);
+}

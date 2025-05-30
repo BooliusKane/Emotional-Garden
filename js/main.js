@@ -20,7 +20,7 @@ $(document).ready(function () {
   let loadingscreen = load(randomNumber);
   $("#output").html(loadingscreen);
 
-  let counter = 5;
+  let counter = 3;
   const counterInterval = setInterval(() => {
     counter--;
     if (counter <= 0) {
@@ -60,6 +60,8 @@ $(document).ready(function () {
       $(".chia-wrapper").removeClass("resting").addClass("active");
       isAwake = true;
     }
+  chiaSound.currentTime = 0;
+  chiaSound.play();
   });
 
   // GREENHOUSE CLICK
@@ -89,3 +91,15 @@ $(document).ready(function () {
 });
 
 console.log("jQuery ready!");
+
+// Audio Effects
+const chiaSound = document.getElementById("chiaSound");
+const clickSound = document.getElementById("click");
+
+// General click effect
+document.addEventListener("click", function (e) {
+  if (e.target.closest("#chia")) return; // skip if clicked element is #chia or inside it
+
+  clickSound.currentTime = 0;
+  clickSound.play();
+});
