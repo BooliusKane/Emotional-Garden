@@ -1,4 +1,14 @@
-/* The modal's background */
+/*Background image*/
+body {
+    overflow-x: hidden;
+    background-image: url('../img/Background.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    height: 100vh;
+}
+
 .credits {
   background-image: url('../img/audio-background.png');
   background-size: contain;
@@ -13,6 +23,17 @@
 
   z-index: 1;
   padding-top: 10px;
-  overflow: auto;     
+  overflow: auto;    
 }
 
+.header-image {
+    float: left;       /* Float the image to the left */
+    height: 120px;      /* Adjust height */
+    margin-right: 10px; /* Add spacing */
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Spacing between items */
+}
