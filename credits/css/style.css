@@ -26,6 +26,13 @@ body {
   overflow: auto;    
 }
 
+.credits-section h3 {
+    margin: 5px 0 0 190px; /* Aligns with h2 */
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.4;
+}
+
 .header-image {
     float: left;       /* Float the image to the left */
     height: 120px;      /* Adjust height */
@@ -36,7 +43,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 20px; /* Spacing between items */
-        padding-top: 120px; /* Adds space at the top */
+    padding-top: 120px; /* Adds space at the top */
 }
 
 .Back_button {
