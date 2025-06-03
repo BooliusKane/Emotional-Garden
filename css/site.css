@@ -365,3 +365,10 @@ html, body{
   pointer-events: auto !important;
   z-index: 1101 !important;
 }
+
+#spotify {
+  position: absolute;
+  top: 950px; /* adjust these values */
+  left: 1270px; /* adjust these values */
+  transform: translate(-50%, -50%); 
+}
