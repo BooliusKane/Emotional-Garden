@@ -372,3 +372,22 @@ html, body{
   left: 1270px; /* adjust these values */
   transform: translate(-50%, -50%); 
 }
+
+.plant-facts-bubble {
+  position: absolute;
+  top: 85%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  background-color: #e8f4d8;
+  color: #3a5a40;
+  padding: 12px 20px;
+  border: 2px solid #8ba888;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.plant-facts-bubble:hover {
+  background-color: #dbeed0;
+}
