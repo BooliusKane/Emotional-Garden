@@ -29,8 +29,8 @@
 
   /* updated positioning */
   position: absolute;
-  top: 225px;
-  left: 145px;
+  top: 160px;
+  left: 105px;
 
   z-index: 1002;
   min-width: 120px;
@@ -81,7 +81,7 @@
   flex-direction: column;
   align-items: center;
   width: 90vw;
-  height: 90%;
+  height: 100%;
   background-color: rgba(232, 244, 216, 0.95);
   border: 2px solid #8ba888;
   border-radius: 24px;
@@ -145,7 +145,7 @@
 
 .plant-image {
   width: 100%;
-  max-width: 600px;
+  max-width: 350px;
   height: auto;
   border-radius: 20px;
   object-fit: cover;
@@ -164,15 +164,14 @@
 
 .care-guide-box {
   background-color: #f5fff0;
-  padding: 20px;
+  padding: 16px;
   border-left: 4px solid #8ba888;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  font-size: 1.05rem;
+  width: 90%;
+  font-size: 0.95rem;
   color: #3a5a40;
-  max-height: 500px;
-  overflow-y: hidden;
+  max-height: 380px;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -185,8 +184,8 @@
 }
 
 .guide-section {
-  margin-bottom: 14px;
-  line-height: 1.6;
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 .hardiness-map {
@@ -199,9 +198,9 @@
 }
 
 .hardiness-map iframe {
-  width: 400%;
-  max-width: 900px;
-  height: 500px;
+  width: 80%;
+  max-width: 700px;
+  height: 360px;
   border: none;
   border-radius: 10px;
   display: inline-block;
