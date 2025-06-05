@@ -172,6 +172,7 @@
   font-size: 0.95rem;
   color: #3a5a40;
   max-height: 380px;
+  overflow-y: auto;
   box-sizing: border-box;
   margin: 0 auto;
 }
