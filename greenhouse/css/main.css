@@ -7,42 +7,42 @@
 
 .fear_sprout{
     scale: 15%;
-    transform: translate(750px, 440px);
+    transform: translate(320px, -1420px);
     z-index: 1500;
     position: fixed;
 }
 
 .happy_sprout{
     scale: 15%;
-    transform: translate(750px, -300px);
+    transform: translate(750px, -1820px);
     z-index: 2000;
     position: fixed;
 }
 
 .lily_sprout{
     scale: 15%;
-    transform: translate(2800px, 390px);
+    transform: translate(1560px, -1100px);
     z-index: 1500;
     position: fixed;
 }
 
 .petunia_sprout{
     scale: 15%;
-    transform: translate(750px, -1060px);
+    transform: translate(1400px, -1400px);
     z-index: 1500;
     position: fixed;
 }
 
 .sad_sprout{
     scale: 15%;
-    transform: translate(2800px, -1100px);
+    transform: translate(1300px, -1830px);
     z-index: 1500;
     position: fixed;
 }
 
 .venus_sprout{
     scale: 15%;
-    transform: translate(2850px, -390px);
+    transform: translate(1800px, -1850px);
     z-index: 1500;
     position: fixed;
 }
