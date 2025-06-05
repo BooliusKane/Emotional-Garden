@@ -86,7 +86,7 @@ function fetchPlant() {
 
 $(document).ready(function () {
   fetchPlant();
-  $("#new-plant").on("click", fetchPlant);
+  $("#new-plant-btn").on("click", fetchPlant);
 });
 
 $(document).ready(function () {
