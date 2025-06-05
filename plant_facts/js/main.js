@@ -26,22 +26,26 @@ function fetchPlant() {
           const hardinessEmbed = plant.hardiness_location?.full_iframe || null;
 
           const cardHTML = `
-            <div class="unified-card">
-              <div class="card-header">
-                <img id="chia-head-sticker" src="img/chia head.png" alt="Chia Sticker">
-                <h2>${commonName}</h2>
-              </div>
-              <div class="card-body">
+          <div class="unified-card">
+            <div class="card-body">
+              <div class="card-left">
+                <div class="card-header">
+                  <img id="chia-head-sticker" src="img/chia head.png" alt="Chia Sticker">
+                  <h2>${commonName}</h2>
+                </div>
                 <img class="plant-image" src="${image}" alt="${commonName}">
                 <div class="plant-traits">
                   <strong>Species:</strong> ${scientificName}<br>
                   <strong>Plant ID:</strong> ${plant.id}<br>
                 </div>
-                ${hardinessEmbed ? `<div class="hardiness-map">${hardinessEmbed}</div>` : ""}
+              </div>
+              <div class="card-right">
                 <div id="guide-box-placeholder"></div>
+                ${hardinessEmbed ? `<div class="hardiness-map">${hardinessEmbed}</div>` : ""}
               </div>
             </div>
-          `;
+          </div>
+        `;
 
           $("#plant-card-container").html(cardHTML);
 
