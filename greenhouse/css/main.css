@@ -1,3 +1,5 @@
+
+
 .main_greenhouse{
     width: 59%;
     transform: rotate(.5deg) translate(320px, -30px);
@@ -5,47 +7,54 @@
     z-index: 1000;
 }
 
-.fear_sprout{
+.fear_sprout {
+    position: absolute;
     scale: 15%;
-    transform: translate(750px, 440px);
+    top: -19%;
+    left: -13%;
     z-index: 1500;
-    position: fixed;
-}
-
-.happy_sprout{
+  }
+  
+  .happy_sprout {
+    position: absolute;
     scale: 15%;
-    transform: translate(750px, -300px);
-    z-index: 2000;
-    position: fixed;
-}
-
-.lily_sprout{
-    scale: 15%;
-    transform: translate(2800px, 390px);
+    top: -31%;
+    left: -10%;
     z-index: 1500;
-    position: fixed;
-}
-
-.petunia_sprout{
+  }
+  
+  .lily_sprout {
+    position: absolute;
     scale: 15%;
-    transform: translate(750px, -1060px);
+    top: -20%;
+    left: 10%;
     z-index: 1500;
-    position: fixed;
-}
-
-.sad_sprout{
+  }
+  
+  .petunia_sprout {
+    position: absolute;
     scale: 15%;
-    transform: translate(2800px, -1100px);
+    top: -32%;
+    left: -15%;
     z-index: 1500;
-    position: fixed;
-}
-
-.venus_sprout{
+  }
+  
+  .sad_sprout {
+    position: absolute;
     scale: 15%;
-    transform: translate(2850px, -390px);
+    top: -47%;
+    left: 15%;
     z-index: 1500;
-    position: fixed;
-}
+  }
+  
+  .venus_sprout {
+    position: absolute;
+    scale: 15%;
+    top: -48%;
+    left: -8%;
+    z-index: 1500;
+  }
+  
 
 /* Back Button */
 .Back_button {
