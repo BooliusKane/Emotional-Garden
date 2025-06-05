@@ -66,9 +66,9 @@
 			sprout.style.display = "block";
 	  
 			// Choose the right image file based on click count
-			const baseSrc = sprout.getAttribute("src").split(".PNG")[0]; // Remove extension
+			const baseSrc = sprout.getAttribute("src").replace(/(\d*)\.PNG$/, '');
 			const stage = Math.min(growthStage, 3); // Cap at stage 3
-			sprout.setAttribute("src", `${baseSrc}${stage}.PNG`);
+			sprout.setAttribute("src", `${baseSrc}${stage}.PNG`);	
 		  }
 		});
 	  </script>
