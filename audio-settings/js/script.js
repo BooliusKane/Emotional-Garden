@@ -1,72 +1,69 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-  // Get modal and button
+  // get modal
   const modal = document.getElementById("myModal");
-  const openBtn = document.getElementById("openAudio");
 
-  // Get buttons
-  const audioPlus = document.getElementById("audioPlus");
-  const audioMinus = document.getElementById("audioMinus");
-  const audioPlus2 = document.getElementById("audioPlus2");
-  const audioMinus2 = document.getElementById("audioMinus2");
+  // get audio control buttons
+  const plus1 = document.getElementById("plus1");
+  const minus1 = document.getElementById("minus1");
+  const plus2 = document.getElementById("plus2");
+  const minus2 = document.getElementById("minus2");
+  
+  // get audio elements
+  const music = document.getElementById("music");
 
-  // Increase/decrease logs
-  plus1.onclick = () => console.log("volume increase");
-  minus1.onclick = () => console.log("volume decrease");
-  plus2.onclick = () => console.log("volume increase!");
-  minus2.onclick = () => console.log("volume decrease!");
 
-  // Function to control worms
-  function setupWormControls(wormIds, plusBtnId, minusBtnId) {
-    const wormLevels = wormIds.map(id => document.getElementById(id));
-    let currentLevel = -1;
+  // initialize volume
+  music.volume = 0; 
+  const step = 0.25;
 
-    function updateDisplay() {
-      wormLevels.forEach((el, idx) => {
-        el.style.display = idx === currentLevel ? "block" : "none";
-      });
+});
+ // function to control worms
+  function setupWormControls(wormIds, plusBtn, minusBtn, audioElement) {
+  const wormLevels = wormIds.map(id => document.getElementById(id));
+  const step = 0.25;
 
-      if (currentLevel === -1) {
-        wormLevels.forEach(el => el.style.display = 'none');
+  function updateDisplay(volume) {
+    let level = Math.round(volume / step);
+    wormLevels.forEach((el, idx) => {
+      el.style.display = (idx === level - 1) ? "block" : "none";
+    });
+
+    if (volume === 0) {
+      wormLevels.forEach(el => el.style.display = "none");
     }
   }
-    document.getElementById(plusBtnId).addEventListener("click", () => {
-      if (currentLevel < wormLevels.length - 1) {
-        currentLevel++;
-        updateDisplay();
-      }
-    });
 
-    document.getElementById(minusBtnId).addEventListener("click", () => {
-      if (currentLevel > -1) {
-        currentLevel--;
-        updateDisplay();
-      }
-    });
+  plusBtn.addEventListener("click", () => {
+    if (audioElement.volume < 1) {
+      audioElement.volume = Math.min(1, audioElement.volume + step);
+      updateDisplay(audioElement.volume);
+      console.log("Volume up:", audioElement.volume);
+    }
+  });
 
-    updateDisplay(); // Initial display
-  }
+  minusBtn.addEventListener("click", () => {
+    if (audioElement.volume > 0) {
+      audioElement.volume = Math.max(0, audioElement.volume - step);
+      updateDisplay(audioElement.volume);
+      console.log("Volume down:", audioElement.volume);
+    }
+  });
 
-  // Initialize worm sets
-  setupWormControls(
-    ["frstWorm25", "frstWorm50", "frstWorm75", "frstWorm100"],
-    "plus1",
-    "minus1"
-  );
+  // initial state
+  audioElement.volume = 0;
+  updateDisplay(audioElement.volume);
+}
 
-  setupWormControls(
-    ["scndWorm25", "scndWorm50", "scndWorm75", "scndWorm100"],
-    "plus2",
-    "minus2"
-  );
-});
+setupWormControls(
+  ["frstWorm25", "frstWorm50", "frstWorm75", "frstWorm100"],
+  plus1,
+  minus1,
+  document.getElementById("music")
+);
 
-// General click effect
-const clickSound = document.getElementById("click");
-
-document.addEventListener("click", function (e) {
-  if (e.target.closest("#chia")) return; // skip if clicked element is #chia or inside it
-
-  clickSound.currentTime = 0;
-  clickSound.play();
-});
+setupWormControls(
+  ["sncdWorm25", "sncdWorm50", "sncdWorm75", "sncdWorm100"],
+  plus2,
+  minus2,
+  document.getElementById("click")
+);

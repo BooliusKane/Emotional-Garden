@@ -44,7 +44,7 @@ body {
   overflow: auto;     
 }
 
-/* first audio increse button */
+/* first audio increase button */
 #plus1 {
   position: absolute;
   top: 340px; /* adjust these values */
@@ -124,4 +124,3 @@ body {
   width: 600px;
   height: auto;
 }
-
