@@ -1,5 +1,5 @@
 #overview {
-    height: 700px;
+    height: 560px;
     width: auto;
     display: block;
     margin: auto;
@@ -8,34 +8,13 @@
 }
 
 #instructions {
-    height: 700px;
+    height: 560px;
     width: auto;
     display: block;
     margin: auto;
     overflow: hidden;
     z-index: 50;
     display: none;
-}
-
-#bluetab {
-    position: absolute;
-    height: 58px;
-    width: auto;
-    display: block;
-    translate: 596px 6px;
-    overflow: hidden;
-    z-index: 50;
-}
-
-#greentab {
-    float:inline-start;
-    height: 60px;
-    width: auto;
-    display: block;
-    margin: auto;
-    translate: 610px 4px;
-    overflow: hidden;
-    z-index: 50;
 }
 
 .hidden {
