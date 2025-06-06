@@ -15,25 +15,49 @@
   transform: scale(1.1);
 }
 
+/* New Plant Button Styling */
+#new-plant-btn {
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #5a7247;
+  background-color: rgba(169, 199, 129, 0.9);
+  border-radius: 18px;
+  padding: 8px 14px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  /* updated positioning */
+  position: absolute;
+  top: 160px;
+  left: 105px;
+
+  z-index: 1002;
+  min-width: 120px;
+}
+
+#new-plant-btn:hover {
+  background-color: #e8f4d8;
+  transform: scale(1.05);
+}
+
 /* Menu Button Styling */
-.menu-icon {
-  font-size: 2rem;
+#menuIcon {
+  font-size: 1.2rem;
   cursor: pointer;
   color: #5a7247;
   background-color: rgba(232, 244, 216, 0.8);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 24px;
+  padding: 10px 16px;
+  border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  z-index: 1101 !important;
 }
 
-.menu-icon:hover {
+#menuIcon:hover {
   background-color: #e8f4d8;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .options-bar {
@@ -45,42 +69,41 @@
 
 #plant-facts-output {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: 40px;
-  flex-wrap: wrap;
-  min-height: calc(100vh - 160px);
+  height: calc(100vh - 160px);
+  overflow: hidden;
+  padding: 20px;
 }
 
 .facts-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1000px;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  height: 100%;
   background-color: rgba(232, 244, 216, 0.95);
   border: 2px solid #8ba888;
   border-radius: 24px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  padding: 24px;
+  padding: 24px 32px;
+  box-sizing: border-box;
   gap: 24px;
-}
-
-.card-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: flex-start;
+  position: relative;
 }
 
 .card-header {
   display: flex;
   align-items: center;
   gap: 12px;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 #chia-head-sticker {
-  width: 70px;
+  width: 72px;
   height: auto;
   transform: scaleX(-1);
   animation: float 2.5s ease-in-out infinite;
@@ -88,38 +111,55 @@
 
 .card-header h2 {
   font-family: "Fredericka the Great", serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #3a5a40;
   margin: 0;
 }
 
-.plant-image {
+.card-body {
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+  height: 100%;
   width: 100%;
-  border-radius: 14px;
-  object-fit: cover;
-  align-self: center;
 }
 
-.plant-traits {
-  font-size: 1rem;
-  color: #3a5a40;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.hardiness-map iframe {
-  width: 100%;
-  height: 280px;
-  border: none;
-  border-radius: 10px;
+.card-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
 
 .card-right {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 48px;
+  justify-content: center;     
+  align-items: center;         
+  height: 100%;
+  gap: 20px;
+}
+
+.plant-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  align-self: center;
+  margin: 0 auto;
+  border: 4px solid #8ba888;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.plant-traits {
+  font-size: 1.3rem;
+  color: #3a5a40;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .care-guide-box {
@@ -128,19 +168,43 @@
   border-left: 4px solid #8ba888;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 90%;
+  font-size: 0.95rem;
+  color: #3a5a40;
+  max-height: 380px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .care-guide-box h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
   color: #3a5a40;
+  text-align: left;
 }
 
 .guide-section {
-  margin-bottom: 12px;
-  font-size: 0.95rem;
-  color: #3a5a40;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.hardiness-map {
+  margin-top: 0;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  order: 2;
+  margin: 0 auto;
+}
+
+.hardiness-map iframe {
+  width: 80%;
+  max-width: 700px;
+  height: 360px;
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 @keyframes float {
@@ -156,6 +220,11 @@
   }
 
   .facts-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card-body {
     flex-direction: column;
   }
 
@@ -193,9 +262,4 @@
 
 .menu-dropdown button:hover {
   background-color: #dbeed0;
-}
-
-#menuIcon {
-  pointer-events: auto !important;
-  z-index: 1101 !important;
 }
