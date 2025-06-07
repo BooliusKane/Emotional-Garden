@@ -282,7 +282,6 @@ body {
 }
 
 .Back_button:hover {
-    background-color: #e8f4d8;
     transform: scale(1.1);
 }
 
