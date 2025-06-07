@@ -91,8 +91,22 @@ body {
   display:block;
 }
 
-.active {
-  display:block;
+.credits-section button {
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  color: #5a7247;
+  background-color: rgba(229, 246, 206, 0.9);
+  border-radius: 18px;
+  padding: 8px 14px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#expand-details:hover {
+  background-color: #d5e9bd;
+  transform: scale(1.05);
 }
 
 .header-image {
