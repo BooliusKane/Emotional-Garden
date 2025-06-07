@@ -11,13 +11,14 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	<!-- Link to the JS main file -->
 	 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
-    	<script src="js/main.js" DEFER></script>
+    <script src="js/main.js" DEFER></script>
+    <script src="../js/dropdown.js" defer></script>
 </head>
 <body>
   <!-- Menu -->
   <a href="../index.html"><img id="Back_button" src="../img/Back_button.png" alt="Back_button" class="Back_button"></img></a>
   <div class="options-bar">
-    <div class="menu-icon">☰</div>
+    <div id="menuIcon" class="menu-icon">☰</div>
     <div id="menuDropdown" class="menu-dropdown hidden">
 			<button onclick="window.location.href='../audio-settings/index.html'">Audio Settings</button>
 			<button onclick="window.location.href='../credits/index.html'">Credits</button>
@@ -28,15 +29,15 @@
   <audio id="chiaSound" class="effects" src="../audio-files/chia-sound.mp3" preload="auto"></audio>
   <audio id="click" class="effects" src="../audio-files/click.mp3" preload="auto"></audio>
 
-  <!-- Header + Button -->
+  <!-- Header  -->
   <main>
     <h1 class="header fredericka-the-great-regular">🌱 Chia's Plant Facts</h1>
-    <button id="new-plant-btn" title="Get another plant">🔁 New Plant</button>
   </main>
   
   <!-- Main Output Area -->
   <div id="plant-facts-output">
     <div class="facts-container">
+      <button id="new-plant-btn" title="Get another plant">🔁 New Plant</button>
       <div id="plant-card-container"></div>
     </div>
   </div>
