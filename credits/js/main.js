@@ -18,6 +18,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-$("#expand-details").click(function(){
-    $("#details").toggleClass("active");
+$("#expand-details1").click(function(){
+    $("#details1").toggleClass("active");
+});
+
+$("#expand-details2").click(function(){
+    $("#details2").toggleClass("active");
+});
+
+$("#expand-details3").click(function(){
+    $("#details3").toggleClass("active");
+});
+
+$("#expand-details4").click(function(){
+    $("#details4").toggleClass("active");
+});
+
+$("#expand-details5").click(function(){
+    $("#details5").toggleClass("active");
+});
+
+$("#expand-details6").click(function(){
+    $("#details6").toggleClass("active");
 });

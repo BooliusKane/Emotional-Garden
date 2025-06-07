@@ -365,14 +365,6 @@ html, body{
   pointer-events: auto !important;
   z-index: 1101 !important;
 }
-<<<<<<< Updated upstream
-
-#spotify {
-  position: absolute;
-  top: 950px; /* adjust these values */
-  left: 1270px; /* adjust these values */
-  transform: translate(-50%, -50%); 
-}
 
 .plant-facts-bubble {
   position: absolute;
@@ -392,5 +384,3 @@ html, body{
 .plant-facts-bubble:hover {
   background-color: #dbeed0;
 }
-=======
->>>>>>> Stashed changes
