@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Credits</title>
-  	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-  	<link rel="stylesheet" href="..css/site.css">
-	<link rel="stylesheet" href="css/style.css"> <!--MAKE SURE TO FIX HEADER-->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
-    <script src="js/main.js" DEFER></script>
+  	<!DOCTYPE html>
+	<!-- Link to the google font "Fredericka the Great" -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+	<!-- Link to the CSS stylesheet -->
+	 	<link rel="stylesheet" type="text/css" href="..css/site.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Link to the JS main file -->
+	 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+    	<script src="js/main.js" DEFER></script>
 </head>
 <body>
 	<a href="../index.html"><img id="Back_button" src="../img/Back_button.png" alt="Back_button" class="Back_button"></img></a>
@@ -43,18 +47,26 @@
 					<h2>Daisy Ly</h2>
 					<div style="clear: both;"></div> <!-- Clear the float -->
 					<button id="expand-details">Expand Credit Details</button>
-						<h3 id="myTitle" class="hidden">Artist</h3>
-						<ul id="myList" class="hidden">
-							<li>Loading Screen Assets</li>
-							<li>Grubby's Design + Grubby Assets</li>
-							<li>Back Button</li>
-						</ul>
-					<h3 id="myTitle" class="hidden">Programmer</h3>
-						<ul id="myList" class="hidden">
-							<li>Loading Screen HTML, CSS, and JS</li>
-							<li>Overview HTML, CSS, and JS</li>
-							<li>Back Button HTML, CSS, and JS</li>
-						</ul>
+					<div id="details" class="hidden">
+						<div class="row">
+							<div class="columns">
+								<h3>Artist</h3>
+								<ul>
+									<li>Loading Screen Assets</li>
+									<li>Grubby's Design + Grubby Assets</li>
+									<li>Back Button</li>
+								</ul>
+							</div>
+							<div class="columns">
+								<h3>Programmer</h3>
+								<ul>
+									<li>Loading Screen HTML, CSS, and JS</li>
+									<li>Overview HTML, CSS, and JS</li>
+									<li>Back Button HTML, CSS, and JS</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 					<div id="output"></div>
 			</div>
 
