@@ -103,3 +103,14 @@ document.addEventListener("click", function (e) {
   clickSound.currentTime = 0;
   clickSound.play();
 });
+
+window.addEventListener("message", function (event) {
+  switch (event.data) {
+    case "playClick":
+      document.getElementById("click").play();
+      break;
+    case "playChia":
+      document.getElementById("chiaSound").play();
+      break;
+  }
+});
