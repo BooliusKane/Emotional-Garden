@@ -14,11 +14,12 @@
 	<!-- Link to the JS main file -->
 	 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
     	<script src="js/main.js" DEFER></script>
+		<script src="../js/dropdown.js" defer></script>
 </head>
 <body>
 	<a href="../index.html"><img id="Back_button" src="../img/Back_button.png" alt="Back_button" class="Back_button"></img></a>
 	<div class="options-bar">
-		<div class="menu-icon">☰</div>
+		<div id="menuIcon" class="menu-icon">☰</div>
 		<div id="menuDropdown" class="menu-dropdown hidden">
 				<button onclick="window.location.href='../audio-settings/index.html'">Audio Settings</button>
 				<button onclick="window.location.href='../credits/index.html'">Credits</button>
