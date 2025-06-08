@@ -37,6 +37,7 @@ body {
   font-weight: bold;
   unicode-bidi: isolate;
   font-family:'Times New Roman', Times, serif;
+  color: #3a5a40;
 }
 
 .credits-section h3 {
@@ -148,6 +149,7 @@ body {
   overflow-y: auto;
   box-sizing: border-box;
   margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 #details6 {
@@ -163,6 +165,7 @@ body {
   overflow-y: auto;
   box-sizing: border-box;
   margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 /* Rows and Columns */
@@ -241,7 +244,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 20px; /* Spacing between items */
-    padding-top: 120px; /* Adds space at the top */
+    padding-top: 100px; /* Adds space at the top */
 }
 
 /* Header Styles */
