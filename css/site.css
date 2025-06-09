@@ -231,25 +231,45 @@ html, body{
     z-index: 1001; /* Above other content */
 }
 
+.plant-facts-bubble {
+  position: absolute;
+  top: 85%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  background-color: #e8f4d8;
+  color: #3a5a40;
+  padding: 12px 20px;
+  border: 2px solid #8ba888;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.plant-facts-bubble:hover {
+  background-color: #dbeed0;
+}
+
 /* The modal's background */
 .modal {
-  background-image: url('../img /audio-background.png');
+  display: none;  
+  background-image: url('../img/audio-background.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   
-  position: fixed;
+  position: fixed;  
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
 
-  z-index: 1;
+  z-index: 99999;
   padding-top: 10px;
-  overflow: hidden;     
+  overflow: auto;     
 }
 
-/* first audio increse button */
+/* first audio increase button */
 #plus1 {
   position: absolute;
   top: 340px; /* adjust these values */
@@ -263,7 +283,7 @@ html, body{
   height: auto;
 }
 
-/* second audio increse button */
+/* second audio increase button */
 #plus2 {
   position: absolute;
   top: 520px; /* adjust these values */
@@ -366,21 +386,30 @@ html, body{
   z-index: 1101 !important;
 }
 
-.plant-facts-bubble {
-  position: absolute;
-  top: 85%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  background-color: #e8f4d8;
-  color: #3a5a40;
-  padding: 12px 20px;
-  border: 2px solid #8ba888;
-  border-radius: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: all 0.2s ease;
+/* background image */
+body {
+    overflow-x: hidden;
+    background-image: url('../img/Background.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    height: 100vh;
 }
-.plant-facts-bubble:hover {
-  background-color: #dbeed0;
+
+/* back button */
+.Back_button {
+    position: fixed;
+    top: 36px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.Back_button:hover {
+    background-color: #e8f4d8;
+    transform: scale(1.1);
 }

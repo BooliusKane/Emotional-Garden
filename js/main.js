@@ -56,7 +56,13 @@ $(document).ready(function () {
     // AUDIO MODAL
     $("#openModal").on("click", function () {
       $("#myModal").fadeIn();
-    }); 
+    });
+
+    $(window).click(function (event) {
+      if ($(event.target).is("#myModal")) {
+        $("#myModal").fadeOut();
+        }
+      });
 
   // CHIA CLICK INTERACTION
   let isAwake = false;
