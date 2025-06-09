@@ -30,12 +30,12 @@
 	<main>
 		<h1 class="header fredericka-the-great-regular">Greenhouse</h1>
 			<img id="Main_Greenhouse" src="img/greenhouse_white_background.png" alt="Main_Greenhouse" class="main_greenhouse">
-			<img id="Fear_sprout"     src="img/fearsprout.PNG"                  alt="Fear_sprout"     class="fear_sprout">
+			<img id="Fear_sprout"     src="img/fearsprout1.PNG"                  alt="fear_sprout"     class="fear_sprout">
 			<img id="happy_sprout"    src="img/happysprout.PNG"                 alt="happy_sprout"    class="happy_sprout">
-			<img id="lily_sprout"     src="img/lilysprout.PNG"                  alt="lily_sprout"     class="lily_sprout">
-			<img id="petunia_sprout"  src="img/angersprout.PNG"                 alt="petunia_sprout"  class="petunia_sprout">
-			<img id="sad_sprout"      src="img/sadsprout.PNG"                   alt="sad_sprout"      class="sad_sprout">
-			<img id="venus_sprout"    src="img/venussprout.PNG"                 alt="venus_sprout"    class="venus_sprout">
+			<img id="lily_sprout"     src="img/lilysprout1.PNG"                  alt="lily_sprout"     class="lily_sprout">
+			<img id="petunia_sprout"  src="img/angersprout1.PNG"                 alt="petunia_sprout"  class="petunia_sprout">
+			<img id="sad_sprout"      src="img/sadsprout1.PNG"                   alt="sad_sprout"      class="sad_sprout">
+			<img id="venus_sprout"    src="img/venussprout1.PNG"                 alt="venus_sprout"    class="venus_sprout">
 		</main>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
@@ -54,20 +54,11 @@
 			disgust: "venus_sprout"
 		  };
 	  
-		  // Hide all sprouts
-		  const sproutIds = Object.values(emotionToSprout);
-		  sproutIds.forEach(id => {
-			const sprout = document.getElementById(id);
-			if (sprout) {
-			  sprout.style.display = "none";
-			}
-		  });
-	  
 		  // Show and update the corresponding sprout
 		  const sproutId = emotionToSprout[emotion];
 		  const sprout = document.getElementById(sproutId);
 		  if (sprout) {
-			sprout.style.display = "block";
+			sprout.style.display = "absolute";
 	  
 			// Choose the right image file based on click count
 			const baseSrc = sprout.getAttribute("src").replace(/(\d*)\.PNG$/, '');
